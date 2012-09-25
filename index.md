@@ -73,6 +73,8 @@ Run the tests.
 $ mt /example/test
 {% endhighlight %}
 
+![MicroTest output](http://hopsoft.github.com/micro_test/images/micro_test.png)
+
 ---
 
 {% include forkme.html %}
