@@ -7,8 +7,7 @@ forkme_url: https://github.com/hopsoft/micro_test
 
 ### Testing should be simple. {#testing-should-be-simple.}
 
-It bothers me that testing frameworks never seem to resist
-the slippery slope of feature creep and eventually become an end unto themselves.
+Testing frameworks never seem to resist the slippery slope of feature creep and eventually become an end unto themselves.
 MiniTest is a step in the right direction, but still feels bigger than it should.
 
 #### MicroTest is an experiment to see just how simple a testing "framework" can be. {#microtest-is-an-experiment-to-see-just-how-simple-a-testing-"framework"-can-be.}
