@@ -85,7 +85,7 @@ class MathTest < MicroTest::Test
 end
 {% endhighlight %}
 
-Run all tests in the "test" dir, _relative to the current dir_.
+Run all tests in the "test" directory _(relative to the current directory)_.
 
 {% highlight bash %}
 $ mt
