@@ -27,7 +27,7 @@ gem install micro_test
 
 ## API {#api}
 
-* Tests subclass `MicroTest::Test`
+* Tests should subclass `MicroTest::Test`
 * Define tests with `test "description" do ...`
 * Setup with `before [:all|:each] do ...`
 * Teardown with `after [:all|:each] do ...`
@@ -85,7 +85,7 @@ class MathTest < MicroTest::Test
 end
 {% endhighlight %}
 
-Run all tests in the test dir, relative to the current dir.
+Run all tests in the "test" dir, _relative to the current dir_.
 
 {% highlight bash %}
 $ mt
