@@ -65,7 +65,7 @@
 <h2 id='testing-should-be-simple.'>Testing should be simple</h2><br />
 <p>
   Too many testing frameworks lose focus and grow to become an end in themselves.<br />
-  MicroTest reigns in the bloat so you can get back to testing.
+  MicroTest reigns in bloat so you can get back to testing.
 </p>
 </div>
 
@@ -80,8 +80,8 @@
 <ul class="unstyled">
 <li><i class="icon-ok"></i>&nbsp; <strong>Small</strong> <span class="subdued"> <em>... about 140 lines of code</em></span></li>
 <li><i class="icon-ok"></i>&nbsp; <strong>Only one <code>assert</code> method</strong> <span class="subdued"> <em>... since this is the heart of testing</em></span></li>
-<li><i class="icon-ok"></i>&nbsp; <strong>Tests run in random order</strong> <span class="subdued"> <em>... to prevent the bad practice of run order depenencies</em></span></li>
-<li><i class="icon-ok"></i>&nbsp; <strong>Plays nice with others</strong> <span class="subdued"> <em>... easy to introduce to an existing codebase</em></span></li>
+<li><i class="icon-ok"></i>&nbsp; <strong>Random run order</strong> <span class="subdued"> <em>... prevents the bad practice of run order depenencies</em></span></li>
+<li><i class="icon-ok"></i>&nbsp; <strong>Plays nice with others</strong> <span class="subdued"> <em>... runs side by side with other test frameworks</em></span></li>
 </ul>
 
 <br />
@@ -89,11 +89,11 @@
 <ul class="unstyled">
   <li><strong><code>MicroTest::Test</code></strong> <span class="subdued"> <em>... superclass for tests</em></span></li>
   <li><strong><code>test</code></strong> <span class="subdued"> <em>... defines a test method</em></span></li>
-  <li><strong><code>before :all</code></strong> <span class="subdued"> <em>... runs once <strong>before</strong> all tests in the class</em></span></li>
-  <li><strong><code>before :each</code></strong> <span class="subdued"> <em>... runs once <strong>before</strong> each test in the class</em></span></li>
+  <li><strong><code>before :all</code></strong> <span class="subdued"> <em>... runs once <strong>before</strong> all tests in a class</em></span></li>
+  <li><strong><code>before :each</code></strong> <span class="subdued"> <em>... runs once <strong>before</strong> each test in a class</em></span></li>
   <li><strong><code>assert</code></strong> <span class="subdued"> <em>... verifies the truthiness of a statement</em></span></li>
-  <li><strong><code>after :each</code></strong> <span class="subdued"> <em>... runs once after <strong>each</strong> test in the class</em></span></li>
-  <li><strong><code>after :all</code></strong> <span class="subdued"> <em>... runs once after <strong>all</strong> tests in the class</em></span></li>
+  <li><strong><code>after :each</code></strong> <span class="subdued"> <em>... runs once after <strong>each</strong> test in a class</em></span></li>
+  <li><strong><code>after :all</code></strong> <span class="subdued"> <em>... runs once after <strong>all</strong> tests in a class</em></span></li>
 </ul>
 
 <br />
@@ -104,49 +104,48 @@
 </div>
 
 <h4>Define a test</h4>
-<div class="highlight">
-  <pre><code class='ruby'># /example/test/math_test.rb
-require 'micro_test'
-class MathTest &lt; MicroTest::Test
+<div class='highlight'><pre><code class='ruby'><span class='c1'># /example/test/math_test.rb</span>
+<span class='k'>class</span> <span class='nc'>MathTest</span> <span class='o'>&lt;</span> <span class='no'>MicroTest</span><span class='o'>::</span><span class='no'>Test</span>
 
-  before :all do
-    # runs once before all tests
-  end
+  <span class='n'>before</span> <span class='ss'>:all</span> <span class='k'>do</span>
+    <span class='c1'># runs once before all tests</span>
+  <span class='k'>end</span>
 
-  before :each do
-    # runs before each test
-  end
+  <span class='n'>before</span> <span class='ss'>:each</span> <span class='k'>do</span>
+    <span class='c1'># runs before each test</span>
+  <span class='k'>end</span>
 
-  test &quot;addition&quot; do
-    assert 2 + 2 == 4
-  end
+  <span class='nb'>test</span> <span class='s2'>&quot;addition&quot;</span> <span class='k'>do</span>
+    <span class='n'>assert</span> <span class='mi'>2</span> <span class='o'>+</span> <span class='mi'>2</span> <span class='o'>==</span> <span class='mi'>4</span>
+  <span class='k'>end</span>
 
-  test &quot;subtraction&quot; do
-    assert 2 - 2 == 0
-  end
+  <span class='nb'>test</span> <span class='s2'>&quot;subtraction&quot;</span> <span class='k'>do</span>
+    <span class='n'>assert</span> <span class='mi'>2</span> <span class='o'>-</span> <span class='mi'>2</span> <span class='o'>==</span> <span class='mi'>0</span>
+  <span class='k'>end</span>
 
-  test &quot;multiplication&quot; do
-    assert 2 * 2 == 4
-  end
+  <span class='nb'>test</span> <span class='s2'>&quot;multiplication&quot;</span> <span class='k'>do</span>
+    <span class='n'>assert</span> <span class='mi'>2</span> <span class='o'>*</span> <span class='mi'>2</span> <span class='o'>==</span> <span class='mi'>4</span>
+  <span class='k'>end</span>
 
-  test &quot;division&quot; do
-    assert 2 / 2 == 1 # add a trailing comment if you want a message
-  end
+  <span class='nb'>test</span> <span class='s2'>&quot;division&quot;</span> <span class='k'>do</span>
+    <span class='n'>assert</span> <span class='mi'>2</span> <span class='o'>/</span> <span class='mi'>2</span> <span class='o'>==</span> <span class='mi'>1</span> <span class='c1'># add a trailing comment if you want a message</span>
+  <span class='k'>end</span>
 
-  # and one failing test
-  test &quot;fail&quot; do
-    assert 2 + 2 == 5
-  end
+  <span class='c1'># and one failing test</span>
+  <span class='nb'>test</span> <span class='s2'>&quot;fail&quot;</span> <span class='k'>do</span>
+    <span class='n'>assert</span> <span class='mi'>2</span> <span class='o'>+</span> <span class='mi'>2</span> <span class='o'>==</span> <span class='mi'>5</span>
+  <span class='k'>end</span>
 
-  after :each do
-    # runs after each test
-  end
+  <span class='n'>after</span> <span class='ss'>:each</span> <span class='k'>do</span>
+    <span class='c1'># runs after each test</span>
+  <span class='k'>end</span>
 
-  after :all do
-    # runs once after all tests
-  end
+  <span class='n'>after</span> <span class='ss'>:all</span> <span class='k'>do</span>
+    <span class='c1'># runs once after all tests</span>
+  <span class='k'>end</span>
 
-end</code></pre>
+<span class='k'>end</span>
+</code></pre>
 </div>
 
 <h4>Run tests</h4>
