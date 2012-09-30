@@ -1,0 +1,41 @@
+body {
+  background-color: #f7f6ed
+
+}
+h1 {
+  border-bottom: none;
+}
+[class^="icon-"], [class*=" icon-"] {
+  background-image: none;
+}
+/*.navbar-inner {
+  background-color: #898984;
+  background-image: -webkit-linear-gradient(top, #aeaeab, #898984);
+}
+*/
+ul.breadcrumb {
+  background-color: transparent;
+}
+li {
+  margin-bottom: 8px;
+}
+.subdued {
+  color: #3a402f;
+}
+.hero-unit {
+  background-color: #7c7c76;
+}
+.hero-unit hr {
+  border-top: solid 2px #6f6f6a;
+  border-bottom: solid 1px #898983;
+}
+.hero-unit h2, .hero-unit p {
+  color: #2B2B2B;
+}
+.page-header {
+  border-color: #ebebea;
+}
+.well {
+  background-color: #fff;
+  border-color: #efeeda;
+}
