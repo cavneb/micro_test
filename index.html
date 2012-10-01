@@ -93,7 +93,7 @@
             <div class="span4">
               <i class="feature-icon icon-heart"></i>
               <h3>Simplicity</h3>
-              <p>A tiny API of only 6 methods.<br />You'll be up and running faster than ever before.</p>
+              <p>A tiny API with only <strong>4</strong> methods.<br />You'll be up and running faster than ever before.</p>
             </div>
             <div class="span4">
               <i class="feature-icon icon-check"></i>
@@ -123,7 +123,7 @@
             <div class="span4">
               <i class="feature-icon icon-magic"></i>
               <h3>Customizable Output</h3>
-              <p>Customize test output with pluggable formatters.<br />Or write your own and give back.</p>
+              <p>Customize test output with pluggable formatters, or give back by writing your own.</p>
             </div>
           </div>
 
@@ -193,28 +193,55 @@ $ mt
               <td>Superclass for all tests.</td>
             </tr>
             <tr>
-              <td><code class="pull-right">test</code></td>
-              <td>Defines a test method.</td>
+              <td><code class="pull-right">test(desc, &block)</code></td>
+              <td>
+                Defines a test method.
+                <ul>
+                  <li><code>desc</code> - a description of what is being tested</li>
+                  <li><code>&block</code> - a block of code which defines the test</li>
+                </ul>
+              </td>
             </tr>
             <tr>
-              <td><code class="pull-right">before :all</code></td>
-              <td>Runs once before all tests in a class.</td>
+              <td><code class="pull-right">assert(value)</code></td>
+              <td>
+                Verifies the truthiness of a value.
+                <ul>
+                  <li><code>value</code> - the value to assert</li>
+                </ul>
+              </td>
             </tr>
             <tr>
-              <td><code class="pull-right">before :each</code></td>
-              <td>Runs once before each test in a class.</td>
+              <td><code class="pull-right">before(what, &block)</code></td>
+              <td>
+                A callback that runs before the specified 'what'.
+                <ul class="unstyled">
+                  <li>
+                    <code>what</code> - indicates the callback type
+                    <ul class="unstyled">
+                      <li><code>:all</code> - runs before all tests in the class</li>
+                      <li><code>:each</code> - runse before each test in the class</li>
+                    </ul>
+                  </li>
+                  <li><code>&block</code> - the block of code to execute</li>
+                </ul>
+              </td>
             </tr>
             <tr>
-              <td><code class="pull-right">assert</code></td>
-              <td>Verifies the truthiness of a statement.</td>
-            </tr>
-            <tr>
-              <td><code class="pull-right">after :each</code></td>
-              <td>Runs once after each test in a class.</td>
-            </tr>
-            <tr>
-              <td><code class="pull-right">after :all</code></td>
-              <td>Runs once after all tests in a class.</td>
+              <td><code class="pull-right">after(what, &block)</code></td>
+              <td>
+                A callback that runs after the specified 'what'.
+                <ul class="unstyled">
+                  <li>
+                    <code>what</code> - indicates the callback type
+                    <ul class="unstyled">
+                      <li><code>:all</code> - runs after all tests in the class</li>
+                      <li><code>:each</code> - runse after each test in the class</li>
+                    </ul>
+                  </li>
+                  <li><code>&block</code> - the block of code to execute</li>
+                </ul>
+              </td>
             </tr>
           </tbody>
         </table>

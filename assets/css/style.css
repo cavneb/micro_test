@@ -184,6 +184,15 @@ header {
   background-color: #fff;
   opacity: 0.9;
 }
+.interface ul {
+  margin-top: 10px;
+}
+.interface ul li {
+  margin-bottom: 5px;
+}
+.interface ul ul {
+  margin: 5px 0 10px 15px;
+}
 .accordion-heading .accordion-toggle:hover{
   background: #ddd;
 }
