@@ -210,7 +210,7 @@ footer a:hover {
 }
 #output-quick-start {
   background-color: #161616;
-  background-image: url("/assets/img/output-quick-start.png");
+  background-image: url("assets/img/output-quick-start.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
