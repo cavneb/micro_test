@@ -79,7 +79,7 @@ hr.soften {
 .font-open-sans-bold-italic{
   font-style: italic;
 }
-header{
+header {
   width:100%;
   background: #f2f2f2;
   padding-bottom: 20px;
@@ -87,11 +87,12 @@ header{
   box-shadow: 0px 1px 10px #ccc;
 
 }
-.masthead{
+.masthead {
   text-align:center;
   background-color: #7C7C76;
+  margin-bottom: 0;
 }
-.masthead h1{
+.masthead h1 {
   font-size: 36px;
   margin: 0 0 20px
 }
@@ -99,6 +100,17 @@ header{
   font-size: 16px;
   padding: 0 10px;
   color: #e8e4c9;
+}
+.subhead {
+  border-top: solid 1px #fff;
+  background-color: #ebecfa;
+  padding: 30px 0 70px 0;
+  box-shadow: inset 0 0 10px #000000;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+}
+.main-content {
+  padding: 30px 0 70px 0;
 }
 .jumbo{
   margin: 30px 0;
@@ -111,7 +123,6 @@ header{
 .jumbo a small{
   color: #fff;
 }
-
 .tab-content{
   min-height: 300px;
 }
@@ -123,8 +134,8 @@ header{
 }
 .feature-icon {
   float: left;
-  margin: 7px 10px 0 0;
-  font-size: 20px;
+  margin: 7px 15px 0 0;
+  font-size: 24px;
 }
 
 .thumbnails{
