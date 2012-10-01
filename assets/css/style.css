@@ -103,14 +103,30 @@ header {
 }
 .subhead {
   border-top: solid 1px #fff;
+  background-color: #D5DAF6;
+  padding: 0 0 70px 0;
+}
+.main-content {
   background-color: #ebecfa;
-  padding: 30px 0 70px 0;
+  padding: 0 0 70px 0;
+}
+.shadow-top {
+  height: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.shadow-top div {
+  margin-left: -20px;
+  width: 200%;
+  height: 50px;
+  box-shadow: inset 0 0 20px #000000;
+  -moz-box-shadow: inset 0 0 20px #000000;
+  -webkit-box-shadow: inset 0 0 20px #000000;
+}
+.shadow-top-small div {
   box-shadow: inset 0 0 10px #000000;
   -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
-}
-.main-content {
-  padding: 30px 0 70px 0;
 }
 .jumbo{
   margin: 30px 0;
@@ -159,25 +175,29 @@ header {
   padding-bottom: 5px;
   border-bottom: dotted 1px #ddd;
 }
-
-.settings thead th{
-  background: #ddd;}
-.settings tbody tr td:first-child{
-  color: #060;}
-
+.interface {
+  box-shadow: 0px 0px 8px rgba(150, 162, 233, 0.50);
+  -moz-box-shadow: 0px 0px 8px rgba(150, 162, 233, 0.50);
+  -webkit-box-shadow: 0px 0px 8px rgba(150, 162, 233, 0.50);
+}
+.interface tr {
+  background-color: #fff;
+  opacity: 0.9;
+}
 .accordion-heading .accordion-toggle:hover{
   background: #ddd;
 }
 footer{
   width: 100%;
-  background: #333;
+  background: #51514C;
   padding-top: 20px;
-  margin-top: 20px;
 }
-footer p{
-  font-size:11px;
+footer * {
   color: #fff;
-
+  opacity: 0.8;
+}
+footer a:hover {
+  color: #fff;
 }
 #output-quick-start {
   background-color: #161616;
