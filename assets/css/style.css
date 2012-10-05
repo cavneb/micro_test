@@ -208,12 +208,23 @@ footer * {
 footer a:hover {
   color: #fff;
 }
+
+#try-it {
+  width: 300px;
+  background-color: transparent;
+  text-align: left;
+  border: none;
+  margin: 0 auto 0 auto;
+  font-size: 150%;
+  line-height: 150%;
+}
 #output-quick-start {
   background-color: #161616;
   background-image: url(../img/output-quick-start.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
 
 @media only screen and (max-width: 1024px) and (orientation:landscape) {
 #brand{
